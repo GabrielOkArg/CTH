@@ -1,0 +1,9 @@
+C:\Projects\CTH\CTH.Servicios\bin\Debug\CTH.Servicios.dll
+C:\Projects\CTH\CTH.Servicios\bin\Debug\CTH.Servicios.pdb
+C:\Projects\CTH\CTH.Servicios\bin\Debug\CTH.BE.dll
+C:\Projects\CTH\CTH.Servicios\bin\Debug\CTH.BE.pdb
+C:\Projects\CTH\CTH.Servicios\obj\Debug\CTH.Servicios.csproj.AssemblyReference.cache
+C:\Projects\CTH\CTH.Servicios\obj\Debug\CTH.Servicios.csproj.CoreCompileInputs.cache
+C:\Projects\CTH\CTH.Servicios\obj\Debug\CTH.Servicios.csproj.CopyComplete
+C:\Projects\CTH\CTH.Servicios\obj\Debug\CTH.Servicios.dll
+C:\Projects\CTH\CTH.Servicios\obj\Debug\CTH.Servicios.pdb

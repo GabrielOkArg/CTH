@@ -1,0 +1,11 @@
+C:\Projects\CTH\CTH.DAL\bin\Debug\CTH.DAL.dll
+C:\Projects\CTH\CTH.DAL\bin\Debug\CTH.DAL.pdb
+C:\Projects\CTH\CTH.DAL\bin\Debug\CTH.BE.dll
+C:\Projects\CTH\CTH.DAL\bin\Debug\CTH.Servicios.dll
+C:\Projects\CTH\CTH.DAL\bin\Debug\CTH.BE.pdb
+C:\Projects\CTH\CTH.DAL\bin\Debug\CTH.Servicios.pdb
+C:\Projects\CTH\CTH.DAL\obj\Debug\CTH.DAL.csproj.AssemblyReference.cache
+C:\Projects\CTH\CTH.DAL\obj\Debug\CTH.DAL.csproj.CoreCompileInputs.cache
+C:\Projects\CTH\CTH.DAL\obj\Debug\CTH.DAL.csproj.CopyComplete
+C:\Projects\CTH\CTH.DAL\obj\Debug\CTH.DAL.dll
+C:\Projects\CTH\CTH.DAL\obj\Debug\CTH.DAL.pdb

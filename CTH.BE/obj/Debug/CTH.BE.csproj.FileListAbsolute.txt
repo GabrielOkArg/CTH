@@ -1,0 +1,6 @@
+C:\Projects\CTH\CTH.BE\bin\Debug\CTH.BE.dll
+C:\Projects\CTH\CTH.BE\bin\Debug\CTH.BE.pdb
+C:\Projects\CTH\CTH.BE\obj\Debug\CTH.BE.csproj.AssemblyReference.cache
+C:\Projects\CTH\CTH.BE\obj\Debug\CTH.BE.csproj.CoreCompileInputs.cache
+C:\Projects\CTH\CTH.BE\obj\Debug\CTH.BE.dll
+C:\Projects\CTH\CTH.BE\obj\Debug\CTH.BE.pdb
