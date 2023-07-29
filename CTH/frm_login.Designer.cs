@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_Usuario = new System.Windows.Forms.Label();
+            this.lbl_Contraseña = new System.Windows.Forms.Label();
             this.txt_user = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_Usuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 131);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario";
+            this.lbl_Usuario.AutoSize = true;
+            this.lbl_Usuario.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Usuario.Location = new System.Drawing.Point(56, 131);
+            this.lbl_Usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Usuario.Name = "lbl_Usuario";
+            this.lbl_Usuario.Size = new System.Drawing.Size(52, 15);
+            this.lbl_Usuario.TabIndex = 0;
+            this.lbl_Usuario.Text = "Usuario";
             // 
-            // label2
+            // lbl_Contraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 205);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lbl_Contraseña.AutoSize = true;
+            this.lbl_Contraseña.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Contraseña.Location = new System.Drawing.Point(56, 205);
+            this.lbl_Contraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Contraseña.Name = "lbl_Contraseña";
+            this.lbl_Contraseña.Size = new System.Drawing.Size(74, 15);
+            this.lbl_Contraseña.TabIndex = 1;
+            this.lbl_Contraseña.Text = "Contraseña";
+            this.lbl_Contraseña.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_user
             // 
@@ -111,12 +111,13 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.txt_user);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_Contraseña);
+            this.Controls.Add(this.lbl_Usuario);
             this.Font = new System.Drawing.Font("Platform Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frm_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,8 +125,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_Usuario;
+        private System.Windows.Forms.Label lbl_Contraseña;
         private System.Windows.Forms.TextBox txt_user;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Button button1;

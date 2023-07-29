@@ -8,6 +8,7 @@ namespace CTH.DAL
 {
     public  interface IConectDB<T>
     {
+      
 
         T GetById(int id);
         T GetByElement(T element);

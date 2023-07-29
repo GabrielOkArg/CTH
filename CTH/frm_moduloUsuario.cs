@@ -52,14 +52,15 @@ namespace CTH
                     usuario.nombre = txtnombre.Text;
                     usuario.apellido = txtapellido.Text;
                     UsuarioLogic usuarioLogic = new UsuarioLogic();
+               
                     usuarioLogic.newUsuario(usuario);
                     MessageBox.Show("Se creo con exito el usuario", "Informacion");
                     this.Close();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
 
-                    throw;
+                    MessageBox.Show(ex.Message, "informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 
             }

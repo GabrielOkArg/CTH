@@ -11,10 +11,11 @@ using CTH.BE;
 using CTH.BLL;
 using CTH.Servicios;
 using CTH.Servicios.Exceptions;
+using CTH.Servicios.Multiidioma;
 
 namespace CTH
 {
-    public partial class frm_login : Form
+    public partial class frm_login : Form , Iobserver
     {
         public frm_login()
         {
@@ -50,6 +51,30 @@ namespace CTH
             {
 
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void frm_login_Load(object sender, EventArgs e)
+        {
+            Subject.AddObserver(this);
+            Subject.Noptify(IdiomaManager.getIdioma.Idioma);
+        }
+
+        public void Update(Idioma idioma)
+        {
+            TraduccionLogic traduccionLogic = new TraduccionLogic();
+            foreach (Traducido item in traduccionLogic.Traducidos(this.Name,IdiomaManager.getIdioma.Idioma.id))
+            {
+                if (item.formulario == this.Name)
+                {
+                    foreach (Control _item in this.Controls)
+                    {
+                        if (item.item == _item.Name)
+                        {
+                            _item.Name = item.traduccion;
+                        }
+                    }
+                }
             }
         }
     }

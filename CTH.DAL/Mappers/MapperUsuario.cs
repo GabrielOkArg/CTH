@@ -22,7 +22,41 @@ namespace CTH.DAL.Mappers
 
         public List<Usuario> GetAll()
         {
-            throw new NotImplementedException();
+            List<Usuario> listado = new List<Usuario>();
+                return listado;
+               
+            
+        }
+        public List<UsuarioView> GetAllView()
+        {
+            using (SqlConnection conn = new SqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+                var cmd = new SqlCommand();
+                cmd.Connection = conn;
+
+                var sql = $@"select * from usuario;";
+
+                cmd.CommandText = sql;
+
+                var reader = cmd.ExecuteReader();
+
+                var lista = new List<UsuarioView>();
+
+                while (reader.Read())
+                {
+                    UsuarioView c = new UsuarioView();
+                    c.username = reader.GetString(reader.GetOrdinal("username"));
+                    c.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                    lista.Add(c);
+                }
+                reader.Close();
+                conn.Close();
+
+                return lista;
+            }
+
+
         }
 
         public Usuario GetByElement(Usuario element)
@@ -167,6 +201,42 @@ namespace CTH.DAL.Mappers
                 conn.Open();
                 cdm.ExecuteNonQuery();
                 conn.Close();
+            }
+        }
+
+        public void GuardarPermisos(UsuarioView u)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(GetConnectionString()))
+                {
+                    conn.Open();
+
+                    var cmd = new SqlCommand();
+                    cmd.Connection = conn;
+
+                    cmd.CommandText = $@"delete from usuarios_permisos where id_usuario=@id;";
+                    cmd.Parameters.Add(new SqlParameter("id", u.Id));
+                    cmd.ExecuteNonQuery();
+
+                    foreach (var item in u.Permisos)
+                    {
+                        cmd = new SqlCommand();
+                        cmd.Connection = conn;
+
+                        cmd.CommandText = $@"insert into usuarios_permisos (id_usuario,id_permiso) values (@id_usuario,@id_permiso) "; ;
+                        cmd.Parameters.Add(new SqlParameter("id_usuario", u.Id));
+                        cmd.Parameters.Add(new SqlParameter("id_permiso", item.Id));
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }  
+
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

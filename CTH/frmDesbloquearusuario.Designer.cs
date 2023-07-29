@@ -167,6 +167,7 @@
             this.Controls.Add(this.txtbusqueda);
             this.Name = "frmDesbloquearusuario";
             this.Text = "frmDesbloquearusuario";
+            this.Load += new System.EventHandler(this.frmDesbloquearusuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

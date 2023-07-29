@@ -70,11 +70,29 @@
     <Compile Include="frm_crearSolicitud.Designer.cs">
       <DependentUpon>frm_crearSolicitud.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_FamiliaPatente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_FamiliaPatente.Designer.cs">
+      <DependentUpon>frm_FamiliaPatente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_idioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_idioma.Designer.cs">
+      <DependentUpon>frm_idioma.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_misSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_misSolicitudes.Designer.cs">
+      <DependentUpon>frm_misSolicitudes.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_moduloUsuario.cs">
       <SubType>Form</SubType>
@@ -88,6 +106,37 @@
     <Compile Include="frm_newOT.Designer.cs">
       <DependentUpon>frm_newOT.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_nuevaSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nuevaSolicitud.Designer.cs">
+      <DependentUpon>frm_nuevaSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_nueva_ot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nueva_ot.Designer.cs">
+      <DependentUpon>frm_nueva_ot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_OrdenesAbiertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_OrdenesAbiertas.Designer.cs">
+      <DependentUpon>frm_OrdenesAbiertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SolicitudesCoordinador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SolicitudesCoordinador.Designer.cs">
+      <DependentUpon>frm_SolicitudesCoordinador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_usuarios.Designer.cs">
+      <DependentUpon>frm_usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CambioDeContraseña.resx">
@@ -102,14 +151,38 @@
     <EmbeddedResource Include="frm_crearSolicitud.resx">
       <DependentUpon>frm_crearSolicitud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_FamiliaPatente.resx">
+      <DependentUpon>frm_FamiliaPatente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_idioma.resx">
+      <DependentUpon>frm_idioma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_misSolicitudes.resx">
+      <DependentUpon>frm_misSolicitudes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_moduloUsuario.resx">
       <DependentUpon>frm_moduloUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_newOT.resx">
       <DependentUpon>frm_newOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_nuevaSolicitud.resx">
+      <DependentUpon>frm_nuevaSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_nueva_ot.resx">
+      <DependentUpon>frm_nueva_ot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_OrdenesAbiertas.resx">
+      <DependentUpon>frm_OrdenesAbiertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SolicitudesCoordinador.resx">
+      <DependentUpon>frm_SolicitudesCoordinador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_usuarios.resx">
+      <DependentUpon>frm_usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

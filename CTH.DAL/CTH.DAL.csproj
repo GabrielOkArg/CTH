@@ -42,7 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IConectDB.cs" />
+    <Compile Include="Mappers\InfraestructuraMapper.cs" />
+    <Compile Include="Mappers\MapperIdioma.cs" />
+    <Compile Include="Mappers\MapperMaterial.cs" />
+    <Compile Include="Mappers\MapperOT.cs" />
+    <Compile Include="Mappers\MapperPermiso.cs" />
     <Compile Include="Mappers\MapperService.cs" />
+    <Compile Include="Mappers\MapperSolicitud.cs" />
+    <Compile Include="Mappers\MapperTraduccion.cs" />
     <Compile Include="Mappers\MapperUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

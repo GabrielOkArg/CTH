@@ -30,7 +30,12 @@ namespace CTH.Servicios.Enum
         usuarioBloqueado3intentos,
         usuarioDesbloqueado,
         ErrorEnDesloqueo,
-        CambioDeContraseña
+        CambioDeContraseña,
+        CreacionDePatente,
+        CreacionDeFamilia,
+        ConfiguracionDeFamilia,
+        CreacionOrdenTrabajo,
+        NuevaSolicitudCreada
     }
 
 }

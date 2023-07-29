@@ -28,155 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cmb_Edificios = new System.Windows.Forms.ComboBox();
+            this.lbl_frmCrearSoli_Edificio = new System.Windows.Forms.Label();
+            this.lbl_Sector = new System.Windows.Forms.Label();
+            this.cmb_sectores = new System.Windows.Forms.ComboBox();
+            this.lbl_Equipo = new System.Windows.Forms.Label();
+            this.cmb_Equipos = new System.Windows.Forms.ComboBox();
+            this.lbl_Detalle = new System.Windows.Forms.Label();
+            this.txt_Detalle = new System.Windows.Forms.TextBox();
+            this.btn_Aceptar = new System.Windows.Forms.Button();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmb_Edificios
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(16, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 0;
+            this.cmb_Edificios.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Edificios.FormattingEnabled = true;
+            this.cmb_Edificios.Location = new System.Drawing.Point(16, 47);
+            this.cmb_Edificios.Name = "cmb_Edificios";
+            this.cmb_Edificios.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Edificios.TabIndex = 0;
+            this.cmb_Edificios.SelectedIndexChanged += new System.EventHandler(this.selectEdificio);
             // 
-            // label1
+            // lbl_frmCrearSoli_Edificio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Edificio";
+            this.lbl_frmCrearSoli_Edificio.AutoSize = true;
+            this.lbl_frmCrearSoli_Edificio.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_frmCrearSoli_Edificio.Location = new System.Drawing.Point(13, 24);
+            this.lbl_frmCrearSoli_Edificio.Name = "lbl_frmCrearSoli_Edificio";
+            this.lbl_frmCrearSoli_Edificio.Size = new System.Drawing.Size(53, 20);
+            this.lbl_frmCrearSoli_Edificio.TabIndex = 1;
+            this.lbl_frmCrearSoli_Edificio.Text = "Edificio";
             // 
-            // label2
+            // lbl_Sector
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Piso";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lbl_Sector.AutoSize = true;
+            this.lbl_Sector.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Sector.Location = new System.Drawing.Point(157, 24);
+            this.lbl_Sector.Name = "lbl_Sector";
+            this.lbl_Sector.Size = new System.Drawing.Size(51, 20);
+            this.lbl_Sector.TabIndex = 5;
+            this.lbl_Sector.Text = "Sector";
             // 
-            // comboBox2
+            // cmb_sectores
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(178, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 2;
+            this.cmb_sectores.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_sectores.FormattingEnabled = true;
+            this.cmb_sectores.Location = new System.Drawing.Point(161, 47);
+            this.cmb_sectores.Name = "cmb_sectores";
+            this.cmb_sectores.Size = new System.Drawing.Size(121, 28);
+            this.cmb_sectores.TabIndex = 4;
+            this.cmb_sectores.SelectedIndexChanged += new System.EventHandler(this.selectedSector);
             // 
-            // label3
+            // lbl_Equipo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(348, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Sector";
+            this.lbl_Equipo.AutoSize = true;
+            this.lbl_Equipo.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Equipo.Location = new System.Drawing.Point(14, 85);
+            this.lbl_Equipo.Name = "lbl_Equipo";
+            this.lbl_Equipo.Size = new System.Drawing.Size(52, 20);
+            this.lbl_Equipo.TabIndex = 6;
+            this.lbl_Equipo.Text = "Equipo";
             // 
-            // comboBox3
+            // cmb_Equipos
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(348, 47);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 4;
+            this.cmb_Equipos.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Equipos.FormattingEnabled = true;
+            this.cmb_Equipos.Location = new System.Drawing.Point(16, 108);
+            this.cmb_Equipos.Name = "cmb_Equipos";
+            this.cmb_Equipos.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Equipos.TabIndex = 7;
             // 
-            // label4
+            // lbl_Detalle
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Equipo";
+            this.lbl_Detalle.AutoSize = true;
+            this.lbl_Detalle.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Detalle.Location = new System.Drawing.Point(17, 148);
+            this.lbl_Detalle.Name = "lbl_Detalle";
+            this.lbl_Detalle.Size = new System.Drawing.Size(52, 20);
+            this.lbl_Detalle.TabIndex = 8;
+            this.lbl_Detalle.Text = "Detalle";
             // 
-            // comboBox4
+            // txt_Detalle
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(16, 108);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 28);
-            this.comboBox4.TabIndex = 7;
+            this.txt_Detalle.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Detalle.Location = new System.Drawing.Point(20, 180);
+            this.txt_Detalle.Multiline = true;
+            this.txt_Detalle.Name = "txt_Detalle";
+            this.txt_Detalle.Size = new System.Drawing.Size(449, 202);
+            this.txt_Detalle.TabIndex = 9;
             // 
-            // label5
+            // btn_Aceptar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Detalle";
+            this.btn_Aceptar.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Aceptar.Location = new System.Drawing.Point(331, 399);
+            this.btn_Aceptar.Name = "btn_Aceptar";
+            this.btn_Aceptar.Size = new System.Drawing.Size(138, 39);
+            this.btn_Aceptar.TabIndex = 10;
+            this.btn_Aceptar.Text = "Aceptar";
+            this.btn_Aceptar.UseVisualStyleBackColor = true;
+            this.btn_Aceptar.Click += new System.EventHandler(this.btn_Aceptar_Click);
             // 
-            // textBox1
+            // btn_Cancelar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 180);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(449, 202);
-            this.textBox1.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(331, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 39);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(161, 399);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 39);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Platform Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.Location = new System.Drawing.Point(161, 399);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(138, 39);
+            this.btn_Cancelar.TabIndex = 11;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
             // 
             // frm_crearSolicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btn_Cancelar);
+            this.Controls.Add(this.btn_Aceptar);
+            this.Controls.Add(this.txt_Detalle);
+            this.Controls.Add(this.lbl_Detalle);
+            this.Controls.Add(this.cmb_Equipos);
+            this.Controls.Add(this.lbl_Equipo);
+            this.Controls.Add(this.lbl_Sector);
+            this.Controls.Add(this.cmb_sectores);
+            this.Controls.Add(this.lbl_frmCrearSoli_Edificio);
+            this.Controls.Add(this.cmb_Edificios);
             this.Name = "frm_crearSolicitud";
             this.Text = "Crear Solicitud";
+            this.Load += new System.EventHandler(this.frm_crearSolicitud_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,17 +164,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cmb_Edificios;
+        private System.Windows.Forms.Label lbl_frmCrearSoli_Edificio;
+        private System.Windows.Forms.Label lbl_Sector;
+        private System.Windows.Forms.ComboBox cmb_sectores;
+        private System.Windows.Forms.Label lbl_Equipo;
+        private System.Windows.Forms.ComboBox cmb_Equipos;
+        private System.Windows.Forms.Label lbl_Detalle;
+        private System.Windows.Forms.TextBox txt_Detalle;
+        private System.Windows.Forms.Button btn_Aceptar;
+        private System.Windows.Forms.Button btn_Cancelar;
     }
 }

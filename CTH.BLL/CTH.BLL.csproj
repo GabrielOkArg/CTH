@@ -42,8 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssistanSession.cs" />
+    <Compile Include="IdiomaLogic.cs" />
+    <Compile Include="InfraestructuraLogic.cs" />
+    <Compile Include="MaterialesLogic.cs" />
+    <Compile Include="OrdenLogic.cs" />
+    <Compile Include="PermisosLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceLogic.cs" />
+    <Compile Include="SolicituLogic.cs" />
+    <Compile Include="TraduccionLogic.cs" />
     <Compile Include="UsuarioLogic.cs" />
   </ItemGroup>
   <ItemGroup>

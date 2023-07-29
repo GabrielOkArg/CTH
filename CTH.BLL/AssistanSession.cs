@@ -51,6 +51,7 @@ namespace CTH.BLL
           
                 string passMD5 = Encriptacion.GetMD5(_pass_);
             MapperUsuario mapperUsuario = new MapperUsuario();
+            PermisosLogic permisosLogic = new PermisosLogic();
             if (_usuario_ != null)
                 {
                     if (_usuario_.pass == passMD5)
@@ -60,6 +61,7 @@ namespace CTH.BLL
                         {
                             SessionManager.Login(_usuario_);
                              mapperUsuario.updateIntentos(_usuario_.getUserName, EncriptacionData.Encriptar("0"));
+                        permisosLogic.FillUserComponents(SessionManager.GetInstance.Usuario);
                         //generar bitacora de login
 
                         ServiceLogic.saveBitacora(_usuario_, MotivoBitacora.InicioSesionExitoso);

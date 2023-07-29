@@ -29,11 +29,20 @@ namespace CTH.BLL
 
         public void newUsuario(Usuario usuario)
         {
-            usuario.pass = Encriptacion.GetMD5(usuario.pass);
-            usuario.intentos = EncriptacionData.Encriptar("0");
-            usuario.bloqueo = false;
-            MapperUsuario mapperUsuario = new MapperUsuario();
-            mapperUsuario.saveUsuario(usuario);
+            Usuario existe = GetUsuario(usuario.getUserName);
+            if (existe == null)
+            {
+                usuario.pass = Encriptacion.GetMD5(usuario.pass);
+                usuario.intentos = EncriptacionData.Encriptar("0");
+                usuario.bloqueo = false;
+                MapperUsuario mapperUsuario = new MapperUsuario();
+                mapperUsuario.saveUsuario(usuario);
+            }
+            else
+            {
+                throw new Exception("El nombre de usuario ya existe en el sistema ingrese otro");
+            }
+           
         }
 
         public Usuario GetUsuario(string username)
@@ -47,6 +56,18 @@ namespace CTH.BLL
         {
             MapperUsuario mapperUsuario = new MapperUsuario();
            return mapperUsuario.DesbloquearUsuario(username);
+        }
+
+        public List<UsuarioView> GetAll()
+        {
+            MapperUsuario mapperUsuario = new MapperUsuario();
+            return mapperUsuario.GetAllView();
+        }
+
+        public void GuardarPermisos(UsuarioView u)
+        {
+            MapperUsuario mapperUsuario = new MapperUsuario();
+            mapperUsuario.GuardarPermisos(u);
         }
     }
 }

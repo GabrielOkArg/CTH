@@ -64,5 +64,10 @@ namespace CTH
                 MessageBox.Show("Error", "Ocurrio un problema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmDesbloquearusuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

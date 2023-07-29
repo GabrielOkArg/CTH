@@ -46,9 +46,14 @@
     <Compile Include="Enciptacion\EncriptacionData.cs" />
     <Compile Include="Enciptacion\llave.cs" />
     <Compile Include="Encriptacion.cs" />
+    <Compile Include="Enum\Estados.cs" />
     <Compile Include="Enum\MotivoBitacora.cs" />
     <Compile Include="Exceptions\ContrasenaIncorrectaException.cs" />
     <Compile Include="Exceptions\FalloLoginException.cs" />
+    <Compile Include="IdiomaManager.cs" />
+    <Compile Include="InputDialog.cs" />
+    <Compile Include="Multiidioma\Iobserver.cs" />
+    <Compile Include="Multiidioma\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionManager.cs" />
   </ItemGroup>
