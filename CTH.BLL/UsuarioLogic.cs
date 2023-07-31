@@ -64,6 +64,20 @@ namespace CTH.BLL
             return mapperUsuario.GetAllView();
         }
 
+        public List<UsuarioView> getForCombo()
+        {
+            MapperUsuario mapperUsuario = new MapperUsuario();
+            UsuarioView opcionSeleccionarTecnico = new UsuarioView { nombre = "Seleccione un técnico", };
+            List<UsuarioView> lista = new List<UsuarioView>();
+            lista.Add(opcionSeleccionarTecnico);
+            foreach (UsuarioView item in mapperUsuario.GetAllView())
+            {
+                lista.Add(item);
+            }
+            return lista;
+           
+        }
+
         public void GuardarPermisos(UsuarioView u)
         {
             MapperUsuario mapperUsuario = new MapperUsuario();

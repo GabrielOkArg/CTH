@@ -18,24 +18,29 @@ namespace CTH
     {
         Solicitud actualSolicitud;
         List<Material> materials;
+        UsuarioView tecnico;
         public frm_nueva_ot(Solicitud solicitud)
         {
             InitializeComponent();
             actualSolicitud = solicitud;
-            UsuarioLogic usuario = new UsuarioLogic();
-            PermisosLogic permisosLogic = new PermisosLogic();
-            List<UsuarioView> usuarios = usuario.GetAll();
+            //UsuarioLogic usuario = new UsuarioLogic();
+            //PermisosLogic permisosLogic = new PermisosLogic();
+            //List<UsuarioView> usuarios = usuario.GetAll();
        
-            List<UsuarioView> usuarioViews = new List<UsuarioView>();
-            foreach (UsuarioView item in usuarios)
-            {
-                permisosLogic.FillUserComponents(item);
-                if (IsInRole(TipoPermiso.Tecnico,item))
-                {
-                    usuarioViews.Add(item);
-                }
-            }
-            cb_asignartecnico.DataSource = usuarioViews;
+            //List<UsuarioView> usuarioViews = new List<UsuarioView>();
+            //UsuarioView opcionSeleccionarTecnico = new UsuarioView { nombre = "Seleccione un técnico", };
+            //foreach (UsuarioView item in usuarios)
+            //{
+            //    permisosLogic.FillUserComponents(item);
+            //    if (IsInRole(TipoPermiso.Tecnico,item))
+            //    {
+            //        usuarioViews.Add(item);
+            //    }
+            //}
+            //usuarioViews.Add(opcionSeleccionarTecnico);
+
+            //cb_asignartecnico.DataSource = usuarioViews;
+
             materials = new List<Material>();
         }
 
@@ -90,6 +95,26 @@ namespace CTH
             lbl_datoSolicitante.Text = actualSolicitud.userName;
             txt_datoDetalle.Text = actualSolicitud.detalle;
 
+
+            UsuarioLogic usuario = new UsuarioLogic();
+            PermisosLogic permisosLogic = new PermisosLogic();
+            List<UsuarioView> usuarios = usuario.GetAll();
+            List<UsuarioView> usuarioViews = new List<UsuarioView>();
+            UsuarioView opcionSeleccionarTecnico = new UsuarioView { username = "Seleccione un técnico", };
+            usuarioViews.Add(opcionSeleccionarTecnico);
+            foreach (UsuarioView item in usuarios)
+            {
+                permisosLogic.FillUserComponents(item);
+                if (IsInRole(TipoPermiso.Tecnico, item))
+                {
+                    usuarioViews.Add(item);
+                }
+            }
+           
+
+            cb_asignartecnico.DataSource = usuarioViews;
+
+
         }
 
         public void Update(Idioma idioma)
@@ -139,9 +164,20 @@ namespace CTH
             DateTime dateTime = DateTime.Now;
             orden.fechacreacion = dateTime;
             orden.cordinadorId = SessionManager.GetInstance.Usuario.id;
+            orden.detalleCoordinador = txt_detalletecnico.Text;
+            orden.tecnicoId =tecnico.Id;
+            orden.solicitud_id = actualSolicitud.id;
             
             OrdenLogic ordenLogic = new OrdenLogic();
             ordenLogic.guardarOrden(orden, materials);
+            MessageBox.Show("La orden se genero con exito!", "Informacion");
+            this.Close();
+        }
+
+        private void cb_asignartecnico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tecnico = (UsuarioView)cb_asignartecnico.SelectedItem;
+            
         }
     }
 }

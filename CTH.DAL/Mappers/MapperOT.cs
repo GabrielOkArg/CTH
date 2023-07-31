@@ -33,17 +33,21 @@ namespace CTH.DAL.Mappers
                 cdm.Parameters.Add("@fechacreacion", SqlDbType.Date).Value = orden.fechacreacion;
                 cdm.Parameters.Add("@id_solicitud", SqlDbType.Int).Value = orden.solicitud_id;
 
-                SqlParameter outputParameter = new SqlParameter("@IdGenerado", SqlDbType.Int);
-                outputParameter.Direction = ParameterDirection.Output;
-                cdm.Parameters.Add(outputParameter);
+                    SqlParameter outputParameter = new SqlParameter("@IdGenerado", SqlDbType.Int);
+                    outputParameter.Direction = ParameterDirection.Output;
+                    cdm.Parameters.Add(outputParameter);
 
-                SqlDataAdapter da = new SqlDataAdapter(cdm);
-                conn.Open();
-                cdm.ExecuteNonQuery();
-                int idgenerado = Convert.ToInt32(outputParameter);
-                conn.Close();
-                MapperMaterial mapperMaterial = new MapperMaterial();
-                mapperMaterial.saveMaterialOT(materials, idgenerado);
+                    SqlDataAdapter da = new SqlDataAdapter(cdm);
+                    conn.Open();
+                    cdm.ExecuteNonQuery();
+                    int idgenerado = Convert.ToInt32(outputParameter.Value);
+                    conn.Close();
+
+                if (materials.Count > 0)
+                {
+                    MapperMaterial mapperMaterial = new MapperMaterial();
+                    mapperMaterial.saveMaterialOT(materials, idgenerado);
+                }
 
             }
         }

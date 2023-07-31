@@ -72,6 +72,7 @@ namespace CTH.DAL.Mappers
                     cdm.CommandText = "saveMaterialOrden";
                     cdm.Parameters.Add("@id_material", SqlDbType.Int).Value = item.id;
                     cdm.Parameters.Add("@id_orden",SqlDbType.Int).Value = orden;
+                    cdm.Parameters.Add("@cantidad", SqlDbType.Int).Value = item.cantidad;
                     SqlDataAdapter da = new SqlDataAdapter(cdm);
                     conn.Open();
                     cdm.ExecuteNonQuery();

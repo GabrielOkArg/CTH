@@ -30,16 +30,25 @@ namespace CTH
         {
             List<string> forms = new List<string>();
             Assembly assembly = Assembly.GetExecutingAssembly();
-
-            Type[] types = assembly.GetTypes();
-
-            foreach (Type item in types)
+            try
             {
-                if (item.IsSubclassOf(typeof(Form)))
+              
+
+                Type[] types = assembly.GetTypes();
+
+                foreach (Type item in types)
                 {
-                    Form form = (Form)Activator.CreateInstance(item);
-                    forms.Add(form.Name);
+                    if (item.IsSubclassOf(typeof(Form)))
+                    {
+                        Form form = (Form)Activator.CreateInstance(item);
+                        forms.Add(form.Name);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+
+               
             }
             return forms;
         }
@@ -51,28 +60,36 @@ namespace CTH
 
             Type[] types = assembly.GetTypes();
 
-            foreach (Type item in types)
+            try
             {
-                if (item.IsSubclassOf(typeof(Form)))
+                foreach (Type item in types)
                 {
-                    Form form = (Form)Activator.CreateInstance(item);
-                    if (formName == form.Name)
+                    if (item.IsSubclassOf(typeof(Form)))
                     {
-                        foreach (Control control in form.Controls)
+                        Form form = (Form)Activator.CreateInstance(item);
+                        if (formName == form.Name)
                         {
-                            if (control.HasChildren)
+                            foreach (Control control in form.Controls)
                             {
-                               getAllControls(control.Name);
-                            }
-                            else
-                            {
-                                names.Add(control.Name);
-                            }
+                                if (control.HasChildren)
+                                {
+                                    getAllControls(control.Name);
+                                }
+                                else
+                                {
+                                    names.Add(control.Name);
+                                }
 
+                            }
                         }
+
                     }
-                    
                 }
+            }
+            catch (Exception)
+            {
+
+               
             }
             return names;
 

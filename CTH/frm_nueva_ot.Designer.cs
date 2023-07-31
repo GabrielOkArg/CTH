@@ -44,7 +44,7 @@
             this.lbl_asignarTecnico = new System.Windows.Forms.Label();
             this.cb_asignartecnico = new System.Windows.Forms.ComboBox();
             this.lbl_detalleCoordinador = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_detalletecnico = new System.Windows.Forms.TextBox();
             this.lbx_materialResultado = new System.Windows.Forms.ListBox();
             this.txtNombreMaterial = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -206,6 +206,7 @@
             this.cb_asignartecnico.Name = "cb_asignartecnico";
             this.cb_asignartecnico.Size = new System.Drawing.Size(372, 26);
             this.cb_asignartecnico.TabIndex = 2;
+            this.cb_asignartecnico.SelectedIndexChanged += new System.EventHandler(this.cb_asignartecnico_SelectedIndexChanged);
             // 
             // lbl_detalleCoordinador
             // 
@@ -217,14 +218,14 @@
             this.lbl_detalleCoordinador.TabIndex = 3;
             this.lbl_detalleCoordinador.Text = "Detalle tecnico";
             // 
-            // textBox1
+            // txt_detalletecnico
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(25, 376);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(372, 171);
-            this.textBox1.TabIndex = 4;
+            this.txt_detalletecnico.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_detalletecnico.Location = new System.Drawing.Point(25, 376);
+            this.txt_detalletecnico.Multiline = true;
+            this.txt_detalletecnico.Name = "txt_detalletecnico";
+            this.txt_detalletecnico.Size = new System.Drawing.Size(372, 171);
+            this.txt_detalletecnico.TabIndex = 4;
             // 
             // lbx_materialResultado
             // 
@@ -298,7 +299,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNombreMaterial);
             this.Controls.Add(this.lbx_materialResultado);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_detalletecnico);
             this.Controls.Add(this.lbl_detalleCoordinador);
             this.Controls.Add(this.cb_asignartecnico);
             this.Controls.Add(this.lbl_asignarTecnico);
@@ -333,7 +334,7 @@
         private System.Windows.Forms.Label lbl_asignarTecnico;
         private System.Windows.Forms.ComboBox cb_asignartecnico;
         private System.Windows.Forms.Label lbl_detalleCoordinador;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_detalletecnico;
         private System.Windows.Forms.ListBox lbx_materialResultado;
         private System.Windows.Forms.TextBox txtNombreMaterial;
         private System.Windows.Forms.Button button1;
